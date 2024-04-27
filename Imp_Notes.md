@@ -81,9 +81,9 @@ dotenv is a popular npm package used in Node.js applications to manage environme
 
 **Command used to create new file using PowerShell**
 
-    New-Item -ItemType File file.txt
+    New-Item file.txt
 
-    E.g : New-Item -ItemType File index.js
+    E.g : New-Item index.js
     
 
     
