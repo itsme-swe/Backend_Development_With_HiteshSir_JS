@@ -65,9 +65,9 @@ dotenv is a popular npm package used in Node.js applications to manage environme
     })
 
     
-**👍 'require( )' Function -**  The require() function is typically used in environments like Node.js for including modules. It allows you to load modules and their functionality into your current file. The require() function takes a module name or path as an argument and returns the exports of the requested module.
+**➡️ 'require( )' Function -**  The require() function is typically used in environments like Node.js for including modules. It allows you to load modules and their functionality into your current file. The require() function takes a module name or path as an argument and returns the exports of the requested module.
 
-    // Using require to import the 'fs' (file system) module
+    // Using require() to import the 'fs' (file system) module
 
     const fs = require('fs')
 
@@ -84,6 +84,20 @@ dotenv is a popular npm package used in Node.js applications to manage environme
     New-Item file.txt
 
     E.g : New-Item index.js
-    
 
+## HTTP headers 
+An **HTTP header** is a part of the communication between your web browser and a website's server. It contains important information about the request or the response, such as the type of data being sent, the size of the data, the format it's in, and other details that help the server understand and process the request correctly. It's like the metadata that accompanies the actual content being sent or received over the internet.
+
+## CORS (Cross-Origin Resource Sharing)
+Imagine someone from another party comes over and wants to join in. They speak the same language, but they're not from the same place. CORS is like the bouncer at the door who decides whether to let them in.
+
+In web terms, **CORS** is a security feature that controls which resources (like fonts, images, or scripts) from one domain can be accessed by another domain. It's there to prevent potentially malicious scripts on one site from accessing sensitive data on another site without permission. So, just like the bouncer, **CORS** decides whether to allow or deny the request for resources from a different origin (domain).
+    
+## Creating Mongoose Schema
+
+    import mongoose from 'mongoose';
+
+    const userSchema = new mongoose.Schema({});
+    
+    export const User = mongoose.model('User', User);   // 'User' is model name
     
