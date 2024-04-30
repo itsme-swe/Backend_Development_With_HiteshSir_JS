@@ -100,4 +100,34 @@ In web terms, **CORS** is a security feature that controls which resources (like
     const userSchema = new mongoose.Schema({});
     
     export const User = mongoose.model('User', User);   // 'User' is model name
+
+**➡️Mongoose Timestamps :** Mongoose schemas support a timestamps option. If you set **timestamps: true**, Mongoose will add two properties of type **Date** to your schema:
+
+    🔸createdAt: a date representing when this document was created
+    
+    🔸updatedAt: a date representing when this document was last updated
+
+
+    const userSchema = new mongoose.Schema(
+    {
+      username: {
+        typeof: String,
+        required: true,
+        unique: true,
+        lowercase: true,
+      },
+
+      email: {
+        typeof: String,
+        required: true,
+        unique: true,
+        lowercase: true,
+      },
+      
+      password: {
+        typeof: String,
+        required: [6, true, 'password is required'],
+      },
+    }, {timestamps: true}
+    );
     
