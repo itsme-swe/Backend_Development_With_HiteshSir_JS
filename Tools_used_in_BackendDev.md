@@ -4,4 +4,4 @@
 
 **➡️ Mongoose**
 
-**➡️**
+**➡️ Cloudinary** For image API or video API's
