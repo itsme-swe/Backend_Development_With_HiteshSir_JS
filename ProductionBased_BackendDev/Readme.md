@@ -4,3 +4,7 @@
 
 **➡️ Nodemon -** It is used to automatically restart the server when changes are made.
 
+**➡️ Important packages we'll be needing mostly -** 
+
+    npm i mongoose express dotenv
+
