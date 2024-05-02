@@ -1,0 +1,11 @@
+{
+  "name": "productionlevel_projectbased_learning",
+  "version": "1.0.0",
+  "description": "Building backend using project based learning. Instructor Mr. Hitesh Choudhry",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
