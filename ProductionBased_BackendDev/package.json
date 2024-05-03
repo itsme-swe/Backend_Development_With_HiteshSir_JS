@@ -5,7 +5,7 @@
   "type": "module",
   "main": "main.js",
   "scripts": {
-    "dev": "nodemon src/main.js"
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/main.js"
   },
   "author": "",
   "license": "ISC",
