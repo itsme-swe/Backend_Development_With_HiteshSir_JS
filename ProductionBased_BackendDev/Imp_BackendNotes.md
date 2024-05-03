@@ -47,3 +47,23 @@ This code could be returned if there's an issue during the execution of certain 
 
 If there's a severe issue that cannot be recovered during the execution of the script, it might return an exit code of 5.
 
+## Node Process Object 
+The **process** object in Node.js is a global object that provides information about the current Node.js process, as well as methods to control and interact with it. It allows you to access information about the environment in which the process is running, such as environment variables, command-line arguments, and more. Here are some key properties and methods of the process object:
+
+**process.argv:** An array containing the command-line arguments passed to the Node.js process. The first element is usually the path to the Node.js executable, and the second element is the path to the script being run.
+
+**process.env :** An object containing the user environment variables. You can access environment variables using this property.
+
+**process.exitCode :** A property that can be set to specify the exit status code of the process. When the process exits, this code will be returned to the operating system.
+
+**process.cwd() :** A method that returns the current working directory of the Node.js process.
+
+**process.pid :** A property containing the process ID (PID) of the Node.js process.
+
+**process.platform :** A property containing a string identifying the operating system platform on which the Node.js process is running (e.g., "darwin" for macOS, "win32" for Windows).
+
+**process.stdout and process.stderr :** Streams representing the standard output and standard error of the process, respectively.
+
+**process.stdin :** A stream representing the standard input of the process.
+
+**process.on(event, callback) :** A method to register event listeners for various events related to the process, such as 'exit', 'uncaughtException', 'SIGINT', etc.
