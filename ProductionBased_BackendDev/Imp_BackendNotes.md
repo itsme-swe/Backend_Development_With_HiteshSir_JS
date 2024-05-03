@@ -1,4 +1,4 @@
-## Connection to MongoDB database
+## Connection to MongoDB database (First Approach)
 **1 -** Firstly we need to import mongoose, a popular Object Data Modeling (ODM) library for MongoDB, to interact with our MongoDB database.
 
     import mongoose from "mongoose";
@@ -21,6 +21,49 @@ Immediately Invoked Function Expression (IIFE) is used to ensure the database co
         
     }
     })()
+
+## Connection to MongoDB database (Second & best Approach)
+🔸Here we'll be following some other steps to create connection with DataBase. We'll be writing the conection code inside the **'db folder'** and after that we'll export this code and import the file in **'main.js'** file.
+
+So following steps to be followed:
+
+**1 .** First get inside the **'db folder'** and create **'index.js'** file.
+
+**2 .** Below code to be written in **index.js** file.
+
+    import mongoose from "mongoose";
+
+    import { DB_NAME } from "../constrants.js";
+
+    const connectDB = async () => {
+        try {
+           const connectionInstance = await mongoose.connect(`${process.env.MONGODB_URI}/${DB_NAME}`)
+           console.log(`\n MongoDB connected !! DB HOST: ${connectionInstance.connection.host}`);
+
+        } catch (error) {
+            console.log("MongoDB connection Error ",error);
+            process.exit(1);
+        }
+    }
+
+    export default connectDB
+
+**3 .** Now we'll be importing **'./db/index.js'** iside the **'./src/main.js'** file, and below code will be used to import the file.
+
+    import dotenv from "dotenv"
+
+    import connectDB from "./db/index.js";
+
+    dotenv.config({
+        path: './env'
+    })
+    connectDB()
+
+    🔸Imp_Note :- To use the "import feature of dotenv package" we need to make some changes inside "package.json" file and that is we need to update - 
+
+        "scripts":{
+            "dev": "nodemon -r dotenv/config --experimental-json-modules src/main.js"
+        }
 
 ## Node.js Exit Codes
 In Node.js, exit codes are numerical values returned by a program when it finishes running. These codes serve as a way for the program to communicate its completion status to the operating system or calling process. Exit codes help indicate whether the program executed successfully or encountered an error during its execution.

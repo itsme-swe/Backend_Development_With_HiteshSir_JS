@@ -9,7 +9,7 @@ connectDB()
 
 /*
 
-// This is the one approach we use to create connection
+// This is the first approach we use to create connection
 
 import express from "express"
 
